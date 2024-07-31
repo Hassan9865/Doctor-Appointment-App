@@ -1,5 +1,6 @@
 import 'package:doctor_appoint_app/view/Home%20view/Home_viewModel.dart';
 import 'package:doctor_appoint_app/view/Home%20view/widgets/find_doctor.dart';
+import 'package:doctor_appoint_app/view/find%20Doctor/find_doctor_view.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -88,10 +89,27 @@ class HomePage extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(20.0),
-                    child: Text(
-                      "Let's Find your Doctor",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Find your Doctor",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => FindDoctorView()));
+                          },
+                          child: Text(
+                            'See All',
+                            style: TextStyle(),
+                          ),
+                        )
+                      ],
                     ),
                   ),
                   Expanded(
