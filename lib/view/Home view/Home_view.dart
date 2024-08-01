@@ -1,5 +1,6 @@
 import 'package:doctor_appoint_app/view/Home%20view/Home_viewModel.dart';
 import 'package:doctor_appoint_app/view/Home%20view/widgets/find_doctor.dart';
+import 'package:doctor_appoint_app/view/Top%20Doctor%20View/top_doctor.dart';
 import 'package:doctor_appoint_app/view/find%20Doctor/find_doctor_view.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
@@ -112,28 +113,36 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Expanded(
+                  Container(
+                    height: MediaQuery.of(context).size.height / 6,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
+                      physics: NeverScrollableScrollPhysics(),
                       children: [
                         FindDoctor(
-                          text: 'heat',
+                          text: 'Neurology',
                           ontap: () {},
                         ),
                         FindDoctor(
-                          text: 'heat',
+                          text: 'orthopedic',
                           ontap: () {},
                         ),
                         FindDoctor(
-                          text: 'heat',
+                          text: 'petheology',
                           ontap: () {},
                         ),
                         FindDoctor(
-                          text: 'heat',
+                          text: 'cardiology',
                           ontap: () {},
                         )
                       ],
                     ),
+                  ),
+                  Text(
+                    'Top Doctors',
+                    style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.width / 15,
+                        fontWeight: FontWeight.bold),
                   ),
                   Expanded(
                     child: ListView.builder(
@@ -143,16 +152,48 @@ class HomePage extends StatelessWidget {
                             padding: const EdgeInsets.all(8.0),
                             child: InkWell(
                               onTap: () {
-                                // Navigator.push(
-                                //     context,
-                                // MaterialPageRoute(
-                                //     builder: (context) => DoctorProfile(
-                                //         doctor: profilelist[Index].title)));
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => TopDoctor()));
                               },
                               child: ListTile(
                                   tileColor: Color(0xffEDF8FF),
-                                  // title: Text(profilelist[Index].title),
-                                  // subtitle: Text(profilelist[Index].subtitle),
+                                  title: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text('dr Kareem'),
+                                      Text('fees 2000'),
+                                    ],
+                                  ),
+                                  subtitle: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text('cardiology'),
+                                          Row(
+                                            children: [
+                                              Icon(
+                                                Icons.star,
+                                                color: Colors.yellow,
+                                              ),
+                                              Text(' 4.5'),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                      ElevatedButton(
+                                          onPressed: () {},
+                                          child: Text("Book Now")),
+                                    ],
+                                  ),
                                   leading: CircleAvatar(
                                     radius: 20,
                                     // backgroundImage:

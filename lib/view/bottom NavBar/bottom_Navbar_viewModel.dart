@@ -1,6 +1,5 @@
-import 'package:doctor_appoint_app/view/Doctor%20Profile%20View/doctor_profile_view.dart';
 import 'package:doctor_appoint_app/view/Home%20view/Home_view.dart';
-import 'package:doctor_appoint_app/view/Top%20Doctor%20View/top_doctor.dart';
+import 'package:doctor_appoint_app/view/find%20Doctor/find_doctor_view.dart';
 import 'package:stacked/stacked.dart';
 
 class BottonNavBarViewModel extends IndexTrackingViewModel {
@@ -9,9 +8,9 @@ class BottonNavBarViewModel extends IndexTrackingViewModel {
       case 0:
         return HomePage();
       case 1:
-        return DoctorProfile();
+        return FindDoctorView();
       case 2:
-        return TopDoctor();
+        return FindDoctorView();
       default:
         HomePage();
     }

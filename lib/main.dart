@@ -1,4 +1,4 @@
-import 'package:doctor_appoint_app/view/Splash%20view/splash.dart';
+import 'package:doctor_appoint_app/view/Splash%20view/splash_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: SplashView(),
     );
   }
 }

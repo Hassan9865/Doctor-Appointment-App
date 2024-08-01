@@ -1,4 +1,5 @@
 import 'package:doctor_appoint_app/bottom%20NavBar/bottom_Navbar_viewModel.dart';
+
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -15,7 +16,6 @@ class BottomNavbarView extends StatelessWidget {
             bottomNavigationBar: BottomNavigationBar(
                 fixedColor: Colors.amber,
                 elevation: 0,
-                mouseCursor: MouseCursor.defer,
                 type: BottomNavigationBarType.fixed,
                 // backgroundColor: Colors.grey[800],
                 currentIndex: viewModel.currentIndex,
@@ -26,12 +26,12 @@ class BottomNavbarView extends StatelessWidget {
                     icon: Icon(Icons.home),
                   ),
                   BottomNavigationBarItem(
-                    label: 'favuorite',
-                    icon: Icon(Icons.favorite_outline),
+                    label: 'Doctor',
+                    icon: Icon(Icons.person),
                   ),
                   BottomNavigationBarItem(
-                    label: 'abc',
-                    icon: Icon(Icons.dangerous),
+                    label: 'favuorite',
+                    icon: Icon(Icons.favorite_outline),
                   ),
                 ]),
           );

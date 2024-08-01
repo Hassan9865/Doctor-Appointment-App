@@ -1,3 +1,4 @@
+import 'package:doctor_appoint_app/view/Doctor%20Profile%20View/doctor_profile_view.dart';
 import 'package:doctor_appoint_app/view/find%20Doctor/find_doctor_viewModel.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
@@ -28,7 +29,12 @@ class FindDoctorView extends StatelessWidget {
                       child: Column(
                         children: [
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => DoctorProfile()));
+                            },
                             child: CircleAvatar(
                               radius: MediaQuery.of(context).size.width / 12,
                               backgroundImage:
