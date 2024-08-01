@@ -1,7 +1,6 @@
 import 'package:doctor_appoint_app/view/Home%20view/Home_viewModel.dart';
 import 'package:doctor_appoint_app/view/Home%20view/widgets/find_doctor.dart';
 import 'package:doctor_appoint_app/view/Top%20Doctor%20View/top_doctor.dart';
-import 'package:doctor_appoint_app/view/find%20Doctor/find_doctor_view.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -100,10 +99,7 @@ class HomePage extends StatelessWidget {
                         ),
                         InkWell(
                           onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => FindDoctorView()));
+                            viewModel.navigateToFindDoctorView();
                           },
                           child: Text(
                             'See All',

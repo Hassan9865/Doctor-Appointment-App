@@ -1,8 +1,6 @@
-import 'package:doctor_appoint_app/bottom%20NavBar/bottom_Navbar_view.dart';
 import 'package:doctor_appoint_app/components/MyButton.dart';
 import 'package:doctor_appoint_app/components/textfeild.dart';
 import 'package:doctor_appoint_app/view/Login%20view/login_viewModel.dart';
-import 'package:doctor_appoint_app/view/Singup%20view/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -47,10 +45,7 @@ class LoginPage extends StatelessWidget {
                     Text("dont have a account? "),
                     InkWell(
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => SignupView()));
+                        viewModel.navigateToSignupView();
                       },
                       child: Text(
                         "Registration",
@@ -66,10 +61,7 @@ class LoginPage extends StatelessWidget {
                   padding: const EdgeInsets.all(20.0),
                   child: Mybutton(
                       ontap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => BottomNavbarView()));
+                        viewModel.navigateToBottomNavbarView();
                         //   showDialog(
                         //       context: context,
                         //       builder: ((context) => AlertDialog(

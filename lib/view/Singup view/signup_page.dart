@@ -1,6 +1,5 @@
 import 'package:doctor_appoint_app/components/MyButton.dart';
 import 'package:doctor_appoint_app/components/textfeild.dart';
-import 'package:doctor_appoint_app/view/Login%20view/login_view.dart';
 import 'package:doctor_appoint_app/view/Singup%20view/signup_viewModel.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
@@ -53,10 +52,7 @@ class SignupView extends StatelessWidget {
                     Text("Already have a account? "),
                     InkWell(
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => LoginPage()));
+                        viewModel.navigateToLoginPage();
                       },
                       child: Text(
                         "Login",

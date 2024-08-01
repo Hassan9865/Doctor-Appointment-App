@@ -1,4 +1,4 @@
-import 'package:doctor_appoint_app/bottom%20NavBar/bottom_Navbar_viewModel.dart';
+import 'package:doctor_appoint_app/view/bottom%20NavBar/bottom_Navbar_viewModel.dart';
 
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
