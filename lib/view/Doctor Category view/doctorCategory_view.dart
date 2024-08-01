@@ -1,16 +1,16 @@
 import 'package:doctor_appoint_app/components/textfeild.dart';
-import 'package:doctor_appoint_app/view/Top%20Doctor%20View/top_doctor_viewModel.dart';
+import 'package:doctor_appoint_app/view/Doctor%20Category%20view/doctorCategoty_viewModel.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-class TopDoctor extends StatelessWidget {
-  const TopDoctor({super.key});
+class DoctorcategoryView extends StatelessWidget {
+  const DoctorcategoryView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder.reactive(
-        viewModelBuilder: () => TopDoctorViewmodel(),
-        builder: (context, TopDoctorViewmodel viewModel, child) {
+        viewModelBuilder: () => DoctorcategotyViewmodel(),
+        builder: (context, DoctorcategotyViewmodel viewModel, child) {
           return Scaffold(
             appBar: AppBar(
               backgroundColor: Colors.white,
@@ -47,18 +47,24 @@ class TopDoctor extends StatelessWidget {
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2),
                         itemBuilder: (context, index) {
-                          return Card(
-                              child: Column(
-                            children: [
-                              CircleAvatar(
-                                radius: MediaQuery.of(context).size.height / 20,
-                                backgroundColor: Colors.pink,
-                              ),
-                              Text("Dr Meboob"),
-                              Text("Heart Doctor"),
-                              Text("available")
-                            ],
-                          ));
+                          return InkWell(
+                            onTap: () {
+                              viewModel.navigateToDoctorProfile();
+                            },
+                            child: Card(
+                                child: Column(
+                              children: [
+                                CircleAvatar(
+                                  radius:
+                                      MediaQuery.of(context).size.height / 20,
+                                  backgroundColor: Colors.pink,
+                                ),
+                                Text("Dr Meboob"),
+                                Text("Heart Doctor"),
+                                Text("available")
+                              ],
+                            )),
+                          );
                         }))
               ],
             ),

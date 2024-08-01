@@ -4,7 +4,7 @@ import 'package:doctor_appoint_app/view/Home%20view/Home_view.dart';
 import 'package:doctor_appoint_app/view/Login%20view/login_view.dart';
 import 'package:doctor_appoint_app/view/Singup%20view/signup_page.dart';
 import 'package:doctor_appoint_app/view/Splash%20view/splash_view.dart';
-import 'package:doctor_appoint_app/view/Top%20Doctor%20View/top_doctor.dart';
+import 'package:doctor_appoint_app/view/Doctor%20Category%20view/doctorCategory_view.dart';
 import 'package:doctor_appoint_app/view/fav_Doctor/favDoctor_view.dart';
 import 'package:doctor_appoint_app/view/find%20Doctor/find_doctor_view.dart';
 import 'package:stacked/stacked_annotations.dart';
@@ -18,7 +18,7 @@ import 'package:stacked_services/stacked_services.dart';
   MaterialRoute(page: BottomNavbarView),
   MaterialRoute(page: HomePage),
   MaterialRoute(page: FindDoctorView),
-  MaterialRoute(page: TopDoctor),
+  MaterialRoute(page: DoctorcategoryView),
   MaterialRoute(page: FavdoctorView),
 ], dependencies: [
   Singleton(classType: NavigationService),

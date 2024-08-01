@@ -6,6 +6,10 @@ import 'package:stacked_services/stacked_services.dart';
 class HomeViewmodel extends BaseViewModel {
   final NavigationService _navigationService = locator<NavigationService>();
   navigateToFindDoctorView() {
-    _navigationService.navigateToFavdoctorView();
+    _navigationService.navigateToFindDoctorView();
+  }
+
+  navigateToDoctorProfile() {
+    _navigationService.navigateToDoctorProfile();
   }
 }

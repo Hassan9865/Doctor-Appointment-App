@@ -7,6 +7,8 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:doctor_appoint_app/view/bottom%20NavBar/bottom_Navbar_view.dart'
     as _i6;
+import 'package:doctor_appoint_app/view/Doctor%20Category%20view/doctorCategory_view.dart'
+    as _i9;
 import 'package:doctor_appoint_app/view/Doctor%20Profile%20View/doctor_profile_view.dart'
     as _i5;
 import 'package:doctor_appoint_app/view/fav_Doctor/favDoctor_view.dart' as _i10;
@@ -16,8 +18,6 @@ import 'package:doctor_appoint_app/view/Home%20view/Home_view.dart' as _i7;
 import 'package:doctor_appoint_app/view/Login%20view/login_view.dart' as _i3;
 import 'package:doctor_appoint_app/view/Singup%20view/signup_page.dart' as _i4;
 import 'package:doctor_appoint_app/view/Splash%20view/splash_view.dart' as _i2;
-import 'package:doctor_appoint_app/view/Top%20Doctor%20View/top_doctor.dart'
-    as _i9;
 import 'package:flutter/material.dart' as _i11;
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart' as _i1;
@@ -38,7 +38,7 @@ class Routes {
 
   static const findDoctorView = '/find-doctor-view';
 
-  static const topDoctor = '/top-doctor';
+  static const doctorcategoryView = '/doctorcategory-view';
 
   static const favdoctorView = '/favdoctor-view';
 
@@ -50,7 +50,7 @@ class Routes {
     bottomNavbarView,
     homePage,
     findDoctorView,
-    topDoctor,
+    doctorcategoryView,
     favdoctorView,
   };
 }
@@ -86,8 +86,8 @@ class StackedRouter extends _i1.RouterBase {
       page: _i8.FindDoctorView,
     ),
     _i1.RouteDef(
-      Routes.topDoctor,
-      page: _i9.TopDoctor,
+      Routes.doctorcategoryView,
+      page: _i9.DoctorcategoryView,
     ),
     _i1.RouteDef(
       Routes.favdoctorView,
@@ -138,9 +138,9 @@ class StackedRouter extends _i1.RouterBase {
         settings: data,
       );
     },
-    _i9.TopDoctor: (data) {
+    _i9.DoctorcategoryView: (data) {
       return _i11.MaterialPageRoute<dynamic>(
-        builder: (context) => const _i9.TopDoctor(),
+        builder: (context) => const _i9.DoctorcategoryView(),
         settings: data,
       );
     },
@@ -258,14 +258,14 @@ extension NavigatorStateExtension on _i12.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> navigateToTopDoctor([
+  Future<dynamic> navigateToDoctorcategoryView([
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
   ]) async {
-    return navigateTo<dynamic>(Routes.topDoctor,
+    return navigateTo<dynamic>(Routes.doctorcategoryView,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,
@@ -384,14 +384,14 @@ extension NavigatorStateExtension on _i12.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> replaceWithTopDoctor([
+  Future<dynamic> replaceWithDoctorcategoryView([
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
   ]) async {
-    return replaceWith<dynamic>(Routes.topDoctor,
+    return replaceWith<dynamic>(Routes.doctorcategoryView,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,

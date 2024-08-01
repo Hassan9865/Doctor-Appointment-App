@@ -13,6 +13,7 @@ class FindDoctorView extends StatelessWidget {
           return Scaffold(
             appBar: AppBar(
               title: Text('Find Doctor'),
+              automaticallyImplyLeading: false,
               centerTitle: true,
               elevation: 0,
               backgroundColor: Colors.white,
@@ -29,7 +30,7 @@ class FindDoctorView extends StatelessWidget {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              viewModel.navigateToDoctorProfile();
+                              viewModel.navigateToDoctorCategory();
                             },
                             child: CircleAvatar(
                               radius: MediaQuery.of(context).size.width / 12,

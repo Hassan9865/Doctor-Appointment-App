@@ -1,6 +1,5 @@
 import 'package:doctor_appoint_app/components/MyButton.dart';
 import 'package:doctor_appoint_app/view/Doctor%20Profile%20View/doctor_Profile_viewModel.dart';
-import 'package:doctor_appoint_app/view/Home%20view/Home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -26,15 +25,15 @@ class DoctorProfile extends StatelessWidget {
               ),
               // centerTitle: true,
               elevation: 0,
-              leading: IconButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomePage()));
-                  },
-                  icon: Icon(
-                    Icons.arrow_back,
-                    color: Colors.black,
-                  )),
+              // leading: IconButton(
+              //     onPressed: () {
+              //       Navigator.push(context,
+              //           MaterialPageRoute(builder: (context) => HomePage()));
+              //     },
+              //     icon: Icon(
+              //       Icons.arrow_back,
+              //       color: Colors.black,
+              //     )),
             ),
             body: Column(
               children: [

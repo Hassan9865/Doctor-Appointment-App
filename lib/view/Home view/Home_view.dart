@@ -1,6 +1,5 @@
 import 'package:doctor_appoint_app/view/Home%20view/Home_viewModel.dart';
 import 'package:doctor_appoint_app/view/Home%20view/widgets/find_doctor.dart';
-import 'package:doctor_appoint_app/view/Top%20Doctor%20View/top_doctor.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -148,10 +147,7 @@ class HomePage extends StatelessWidget {
                             padding: const EdgeInsets.all(8.0),
                             child: InkWell(
                               onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => TopDoctor()));
+                                viewModel.navigateToDoctorProfile();
                               },
                               child: ListTile(
                                   tileColor: Color(0xffEDF8FF),
